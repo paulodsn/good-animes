@@ -1,0 +1,19 @@
+body {
+	background-color: #fff1d6;
+	background-image: url('assets/image/noise.png');
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	line-height: 1.6;
+}
+
+h1 a {
+	color: #7e9f19;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: #475812;
+}
+
+.clear {
+	clear: both;
+}
