@@ -14,3 +14,9 @@ run:
 		--net=host \
 		$(NAME) \
 		npm run dev
+
+run-teste--e2e:
+	cd e2e/ \
+	docker-compose up \
+	--exit-code-from \
+	cypress

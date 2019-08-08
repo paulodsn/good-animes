@@ -1,0 +1,23 @@
+
+version: '3.2'
+
+services:
+  application:
+    build: ../
+    volumes:
+      - ../:/app
+    environment:
+      - PORT=5000
+    command:
+      "npm run dev"
+    network_mode: "host"
+  cypress:
+    image: "cypress/included:3.4.0"
+    depends_on:
+      - application
+    environment:
+      - CYPRESS_baseUrl=http://localhost:5000
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    network_mode: "host"
